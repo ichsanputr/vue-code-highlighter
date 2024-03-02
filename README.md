@@ -35,7 +35,7 @@ import 'vue-code-highlighter/dist/style.css'
 ```
 
 This package does not need to call CSS from the highlight.js package because I have already wrapped it. What you need to do is install the highlight.js package.
-## Example & Demo
+### Example & Demo
 
 Example code and demo available in <a href="https://vue-code-highlighter.muhichsan.com">vue-code-highlighter.muhichsan.com</a>
 
@@ -60,7 +60,7 @@ There are 2 types of components, namely VueCodeHighlighter and VueCodeHighlighte
 | lang      |  Array  |       true       | See example below                                         |
  disableCopy     |  Boolean  |     no     | Disable copy button and copy functionality to code        |
 
-Example for lang props in Multi Code.
+<p>Example for lang props in Multi Code.</p>
 
 ```js
 const codeMulti = [
