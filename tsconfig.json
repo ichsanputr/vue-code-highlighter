@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"strict": true,
+		"jsx": "preserve",
+		"sourceMap": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"lib": [
+			"ESNext",
+		],
+		"skipLibCheck": true,
+		"declaration": true,
+		"outDir": "./dist",
+		"forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+		"noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied 'any' type. */,
+		"strictNullChecks": true /* When type checking, take into account 'null' and 'undefined'. */,
+		"alwaysStrict": true /* Ensure 'use strict' is always emitted. */,
+		"noFallthroughCasesInSwitch": true /* Enable error reporting for fallthrough cases in switch statements. */,
+		"paths": {
+			"@/*": [
+				"./src/*"
+			]
+		},
+	},
+	"include": [
+		"./src/**/*.ts",
+		"./src/**/*.d.ts",
+		"./src/**/*.vue",
+	]
+}

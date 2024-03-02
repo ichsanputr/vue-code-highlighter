@@ -1,0 +1,44 @@
+{
+	"name": "vue-code-highlighter",
+	"version": "1.0.0",
+	"description": "Vue component for highlighting code or syntax with modern style, copy functionality, multicode and powered by Highlight.js",
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/vue-code-highlighter.umd.cjs",
+	"module": "./dist/vue-code-highlighter.js",
+	"types": "./dist/main.d.ts",
+	"style": "./dist/style.css",
+	"scripts": {
+		"build": "vite build && vue-tsc --declaration --emitDeclarationOnly"
+	},
+	"devDependencies": {
+		"@types/node": "^20.4.10",
+		"@vitejs/plugin-vue": "^4.2.3",
+		"@vue/test-utils": "^2.4.1",
+		"path": "^0.12.7",
+		"vite": "^4.0.0",
+		"vitest": "^0.32.2",
+		"vue-tsc": "^1.8.8"
+	},
+	"peerDependencies": {
+		"vue": "^3.0.0",
+		"highlight.js": "^10.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ichsanputr/vue-code-highlighter"
+	},
+	"keywords": [
+		"vue code highlight",
+		"vue syntax highlighter",
+		"code highlighter",
+		"vue 3 syntax code"
+	],
+	"author": "Muhammad Ichsanul Fadhil",
+	"license": "ISC",
+	"dependencies": {
+		"highlight.js": "^11.9.0"
+	}
+}
