@@ -34,7 +34,7 @@ function copyCode() {
 <template>
     <div class="mx-auto wrapper-code-highlight mt-6">
         <div class="header-code-highlight" :class="props.disableCopy ? 'border-disable-copy' : 'border-copy'">
-            <div :class="{ 'mr-6': !props.disableCopy, 'border-disable-copy' : props.disableCopy }" class="wrapper-section-code-highlight flex items-center">
+            <div :class="{ 'mr6': !props.disableCopy, 'border-disable-copy' : props.disableCopy }" class="wrapper-section-code-highlight flex items-center">
                 <div class="wrapper-title-code-highlight center h-full">
                     <span>
                         {{ props.title?.toUpperCase() ?? lang }}
@@ -118,7 +118,7 @@ pre code {
     align-items: center;
 }
 
-.mr-6 {
+.mr6 {
     margin-right: 6px;
 }
 </style>
