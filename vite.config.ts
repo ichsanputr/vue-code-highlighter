@@ -12,8 +12,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
-      name: 'VueCodeHiglighter',
-      fileName: 'vue-code-higlighter'
+      name: 'VueCodeHighlighter',
+      fileName: 'vue-code-highlighter'
     },
     rollupOptions: {
       external: ['vue', 'highlight.js'],

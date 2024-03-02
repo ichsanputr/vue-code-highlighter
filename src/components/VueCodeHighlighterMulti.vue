@@ -60,7 +60,7 @@ function changeCurrentCode(index: number) {
 </script>
 <template>
     <div v-if="ready" class="mx-auto wrapper-codemulti-highlight mt-6">
-        <div class="header-codemulti-higlight">
+        <div class="header-codemulti-highlight">
             <div class="wrapper-section-codemulti-highlight flex items-center" :class="{ 'mr-6': !props.disableCopy, 'border-disable-copy' : props.disableCopy }">
                 <div @click="changeCurrentCode(key)" v-for="(item, key) in props.code"
                     :class="{ 'rounded-left-corner': key == 0, 'active': code[currentCode].lang == item.lang }"
@@ -115,7 +115,7 @@ pre code {
     border-radius: 0 10px 0 10px;
 }
 
-.header-codemulti-higlight {
+.header-codemulti-highlight {
     display: flex;
     justify-content: space-between;
     align-items: center;
