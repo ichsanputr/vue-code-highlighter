@@ -32,17 +32,17 @@ function copyCode() {
 }
 </script>
 <template>
-    <div class="mx-auto wrapper-code-highlight mt-6">
+    <div class="wrapper-code-highlight">
         <div class="header-code-highlight" :class="props.disableCopy ? 'border-disable-copy' : 'border-copy'">
-            <div :class="{ 'mr6': !props.disableCopy, 'border-disable-copy' : props.disableCopy }" class="wrapper-section-code-highlight flex items-center">
-                <div class="wrapper-title-code-highlight center h-full">
+            <div :class="{ 'mr6': !props.disableCopy, 'border-disable-copy' : props.disableCopy }" class="wrapper-section-code-highlight">
+                <div class="wrapper-title-code-highlight">
                     <span>
                         {{ props.title?.toUpperCase() ?? lang }}
                     </span>
                 </div>
             </div>
             <div v-if="!props.disableCopy" @click="copyCode"
-                class="wrapper-copy-code-highlight h-full px-4 flex bg-[#334155] cursor-pointer">
+                class="wrapper-copy-code-highlight">
                 <Copy v-if="!singleCopy" />
                 <CopyChecked v-else />
             </div>
@@ -55,13 +55,14 @@ function copyCode() {
 <style>
 @import url('https://fonts.cdnfonts.com/css/general-sans?styles=135310');
 
-.wrapper-title-code-highlight {
-    font-family: 'General Sans', sans-serif;
+pre {
+    margin: 0 !important;
 }
 
 pre code {
     border-radius: 0 0 10px 10px !important;
     margin: 0 !important;
+    font-size: 14px;
 }
 
 .wrapper-code-highlight {
@@ -75,20 +76,32 @@ pre code {
     width: 100%;
     height: 100%;
     font-size: 14px;
+    display: flex;
+    align-items: center;
 }
 
 .wrapper-title-code-highlight {
+    font-family: 'General Sans', sans-serif;
     padding: 0 16px;
     font-weight: 500;
     font-size: 12px;
     border-radius: 10px 0 0 0;
     background-color: #2563EB;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .wrapper-copy-code-highlight {
     padding: 0 16px;
     font-weight: 500;
     border-radius: 0 10px 0 10px;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    background-color: #334155;
+    cursor: pointer;
 }
 
 .header-code-highlight {
@@ -107,15 +120,6 @@ pre code {
 
 .border-disable-copy {
     border-radius: 10px 10px 0 0;
-}
-
-.h-full {
-    height: 100%;
-}
-
-.center {
-    display: flex;
-    align-items: center;
 }
 
 .mr6 {

@@ -59,18 +59,18 @@ function changeCurrentCode(index: number) {
 }
 </script>
 <template>
-    <div v-if="ready" class="mx-auto wrapper-codemulti-highlight mt-6">
+    <div v-if="ready" class="wrapper-codemulti-highlight">
         <div class="header-codemulti-highlight">
-            <div class="wrapper-section-codemulti-highlight flex items-center" :class="{ 'mr6': !props.disableCopy, 'border-disable-copy' : props.disableCopy }">
+            <div class="wrapper-section-codemulti-highlight" :class="{ 'mr6': !props.disableCopy, 'border-disable-copy' : props.disableCopy }">
                 <div @click="changeCurrentCode(key)" v-for="(item, key) in props.code"
                     :class="{ 'rounded-left-corner': key == 0, 'active': code[currentCode].lang == item.lang }"
-                    class="wrapper-title-codemulti-highlight center h-full">
+                    class="wrapper-title-codemulti-highlight">
                     <span>
                         {{ item.title ? item.title.toUpperCase() : item.lang.toUpperCase() }}
                     </span>
                 </div>
             </div>
-            <div v-if="!props.disableCopy" @click="copyCode" class="wrapper-copy-codemulti-highlight h-full px-4 flex bg-[#334155] cursor-pointer">
+            <div v-if="!props.disableCopy" @click="copyCode" class="wrapper-copy-codemulti-highlight">
                 <Copy v-if="!copy" />
                 <CopyChecked v-else />
             </div>
@@ -80,13 +80,14 @@ function changeCurrentCode(index: number) {
     </div>
 </template>
 <style>
-pre code {
-    border-radius: 0 0 10px 10px !important;
+pre {
     margin: 0 !important;
 }
 
-.wrapper-title-codemulti-highlight {
-    font-family: 'General Sans', sans-serif;
+pre code {
+    border-radius: 0 0 10px 10px !important;
+    margin: 0 !important;
+    font-size: 14px;
 }
 
 .wrapper-codemulti-highlight {
@@ -100,19 +101,32 @@ pre code {
     width: 100%;
     height: 100%;
     font-size: 14px;
+    display: flex;
+    align-items: center;
 }
 
 .wrapper-title-codemulti-highlight {
+    font-family: 'General Sans', sans-serif;
     cursor: pointer;
     padding: 0 16px;
     font-weight: 500;
     font-size: 12px;
+    font-family: 'General Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .wrapper-copy-codemulti-highlight {
     padding: 0 16px;
     font-weight: 500;
     border-radius: 0 10px 0 10px;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    background-color: #334155;
+    cursor: pointer;
 }
 
 .header-codemulti-highlight {
@@ -144,15 +158,6 @@ pre code {
 
 .border-disable-copy {
     border-radius: 10px 10px 0 0;
-}
-
-.h-full {
-    height: 100%;
-}
-
-.center {
-    display: flex;
-    align-items: center;
 }
 
 .mr6 {
