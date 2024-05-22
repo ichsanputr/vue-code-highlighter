@@ -63,7 +63,7 @@ function changeCurrentCode(index: number) {
         <div class="header-codemulti-highlight">
             <div class="wrapper-section-codemulti-highlight" :class="{ 'mr6': !props.disableCopy, 'border-disable-copy' : props.disableCopy }">
                 <div @click="changeCurrentCode(key)" v-for="(item, key) in props.code"
-                    :class="{ 'rounded-left-corner': key == 0, 'active': code[currentCode].lang == item.lang }"
+                    :class="{ 'rounded-left-corner': key == 0, 'tab-active': code[currentCode].lang == item.lang }"
                     class="wrapper-title-codemulti-highlight">
                     <span>
                         {{ item.title ? item.title.toUpperCase() : item.lang.toUpperCase() }}
@@ -79,7 +79,7 @@ function changeCurrentCode(index: number) {
         <pre v-else><code @copy.prevent @paste.prevent @click.right.prevent class="hljs" v-html="code[currentCode].code"></code></pre>
     </div>
 </template>
-<style>
+<style scoped>
 pre {
     margin: 0 !important;
 }
@@ -148,7 +148,7 @@ pre code {
     border-radius: 0 !important;
 }
 
-.active {
+.tab-active {
     background-color: #2563EB;
 }
 

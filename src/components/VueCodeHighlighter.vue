@@ -52,7 +52,7 @@ function copyCode() {
             v-else><code class="hljs" v-html="code" @copy.prevent @paste.prevent @click.right.prevent :class="'lang-' + `${props.lang}`"></code></pre>
     </div>
 </template>
-<style>
+<style scoped>
 @import url('https://fonts.cdnfonts.com/css/general-sans?styles=135310');
 
 pre {
