@@ -1,6 +1,6 @@
 {
 	"name": "vue-code-highlighter",
-	"version": "1.0.9",
+	"version": "1.1.0",
 	"description": "Vue component for highlighting code or syntax with modern style, copy functionality, multicode and powered by Highlight.js",
 	"type": "module",
 	"files": [
