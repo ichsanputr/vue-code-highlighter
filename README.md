@@ -48,7 +48,7 @@ There are 2 types of components, namely VueCodeHighlighter and VueCodeHighlighte
 
 | Attribute    |   Type   |    Is Required     | Description                                                                   |
 |:-------------|:--------:|:--------------:|:------------------------------------------------------------------------------|
-| lang      |  String  |       true       | Code languange from Highlighter cheatset, see <a href="https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md">Supported languange</a>                                              |
+| code      |  String  |       true       | Code languange from Highlighter cheatset, see <a href="https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md">Supported languange</a>                                              |
 | code         |  String  |   true    | Plain code which will be displayed,  please wrap your code using backtick (``)           |
 | title     |  String  | no | Custom title in header |
 | disableCopy     |  Boolean  |     no     | Disable copy button and copy functionality to code        |
