@@ -57,7 +57,7 @@ There are 2 types of components, namely VueCodeHighlighter and VueCodeHighlighte
 
 | Attribute    |   Type   |    Is Required     | Description                                                                   |
 |:-------------|:--------:|:--------------:|:------------------------------------------------------------------------------|
-| lang      |  Array  |       true       | See example below                                         |
+| code      |  Array  |       true       | See example below                                         |
  disableCopy     |  Boolean  |     no     | Disable copy button and copy functionality to code        |
 
 <p>Example for lang props in Multi Code.</p>
