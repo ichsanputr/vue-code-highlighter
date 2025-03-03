@@ -101,3 +101,21 @@ code.hljs {
 .hljs-link {
     text-decoration: underline
 }
+
+pre::-webkit-scrollbar {
+    width: 6px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: #445771;
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+    background: #2b3543;
+}

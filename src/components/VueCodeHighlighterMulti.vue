@@ -7,6 +7,7 @@ import Copy from './Icons/Copy.vue'
 import CopyChecked from "./Icons/CopyChecked.vue";
 
 const props = defineProps<{
+    maxHeight?: number
     code: Array<{
         code: string
         lang: string
@@ -75,13 +76,14 @@ function changeCurrentCode(index: number) {
                 <CopyChecked v-else />
             </div>
         </div>
-        <pre v-if="!disableCopy"><code class="hljs" v-html="code[currentCode].code"></code></pre>
-        <pre v-else><code @copy.prevent @paste.prevent @click.right.prevent class="hljs" v-html="code[currentCode].code"></code></pre>
+        <pre :style="{ maxHeight: props.maxHeight + 'px', overflow: 'auto', whiteSpace: 'pre-wrap', wordWrap: 'break-word' }" v-if="!disableCopy"><code class="hljs" v-html="code[currentCode].code"></code></pre>
+        <pre :style="{ maxHeight: props.maxHeight + 'px', overflow: 'auto', whiteSpace: 'pre-wrap', wordWrap: 'break-word' }" v-else><code @copy.prevent @paste.prevent @click.right.prevent class="hljs" v-html="code[currentCode].code"></code></pre>
     </div>
 </template>
 <style scoped>
 pre {
     margin: 0 !important;
+    border-radius: 0 0 10px 10px !important;
 }
 
 pre code {

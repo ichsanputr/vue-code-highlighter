@@ -10,6 +10,7 @@ const lang = ref('')
 const code = ref('')
 const singleCopy = ref(false)
 const props = defineProps<{
+    maxHeight?: number
     lang: string
     code: string
     title?: string
@@ -23,7 +24,6 @@ onMounted(() => {
     code.value = Highlight.highlight(props.code, {
         language: props.lang
     }).value;
-
 })
 
 function copyCode() {
@@ -47,8 +47,8 @@ function copyCode() {
                 <CopyChecked v-else />
             </div>
         </div>
-        <pre v-if="!props.disableCopy"><code class="hljs" v-html="code" :class="'lang-' + `${props.lang}`"></code></pre>
-        <pre
+        <pre :style="{ maxHeight: props.maxHeight + 'px', overflow: 'auto', whiteSpace: 'pre-wrap', wordWrap: 'break-word' }" v-if="!props.disableCopy"><code class="hljs" v-html="code" :class="'lang-' + `${props.lang}`"></code></pre>
+        <pre :style="{ maxHeight: props.maxHeight + 'px', overflow: 'auto', whiteSpace: 'pre-wrap', wordWrap: 'break-word' }"
             v-else><code class="hljs" v-html="code" @copy.prevent @paste.prevent @click.right.prevent :class="'lang-' + `${props.lang}`"></code></pre>
     </div>
 </template>
@@ -57,6 +57,7 @@ function copyCode() {
 
 pre {
     margin: 0 !important;
+    border-radius: 0 0 10px 10px !important;
 }
 
 pre code {
