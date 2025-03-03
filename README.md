@@ -47,18 +47,12 @@ There are 2 types of components, namely VueCodeHighlighter and VueCodeHighlighte
 <b>VueCodeHighlighter</b>
 
 | Attribute    |   Type   |    Is Required     | Description                                                                   |
-|:-------------|:--------:|:--------------:|:------------------------------------------------------------------------------|
-| lang      |  String  |       true       | Code languange from Highlighter cheatset, see <a href="https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md">Supported languange</a>                                              |
-| code         |  String  |   true    | Plain code which will be displayed,  please wrap your code using backtick (``)           |
-| title     |  String  | no | Custom title in header |
-| disableCopy     |  Boolean  |     no     | Disable copy button and copy functionality to code        |
-
-<b>VueCodeHighlighterMulti</b>
-
-| Attribute    |   Type   |    Is Required     | Description                                                                   |
-|:-------------|:--------:|:--------------:|:------------------------------------------------------------------------------|
-| code      |  Array  |       true       | See example below                                         |
- disableCopy     |  Boolean  |     no     | Disable copy button and copy functionality to code        |
+|:-------------|:--------:|:------------------:|:------------------------------------------------------------------------------|
+| lang         |  String  |       true         | Code language from Highlighter cheatset, see [Supported language](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md) |
+| code         |  String  |       true         | Plain code which will be displayed, please wrap your code using backticks (``) |
+| title        |  String  |        no          | Custom title in header                                                         |
+| disableCopy  |  Boolean |        no          | Disable copy button and copy functionality to code                             |
+| maxHeight    |  Number  |        no          | (ex :max-height=300) Maximum height of the code block, which will enable scrolling if exceeded     |
 
 <p>Example for lang props in Multi Code.</p>
 
